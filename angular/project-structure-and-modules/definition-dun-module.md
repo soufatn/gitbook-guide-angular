@@ -2,9 +2,9 @@
 
 Angular propose un concept de modules afin de mieux structurer le code et faciliter la réutilisation et le partage.
 
-{% hint style="warning" %}
+
 Attention à ne pas confondre les **modules Angular** avec les **modules ES2015 / TypeScript**.
-{% endhint %}
+
 
 Un module Angular est un mécanisme permettant de :
 
@@ -14,8 +14,7 @@ Un module Angular est un mécanisme permettant de :
 
 Un module Angular est défini simplement avec une classe _\(généralement vide\)_ et le décorateur `NgModule`.
 
-{% code-tabs %}
-{% code-tabs-item title="src/app/book/book.module.ts" %}
+
 ```typescript
 
 import { NgModule } from '@angular/core';
@@ -38,8 +37,6 @@ import { BookPreviewComponent } from './book-preview/book-preview.component';
 export class BookModule {
 }
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
 
 ## `declarations`
 
@@ -49,18 +46,15 @@ Définit la liste des composants _\(ou directives, pipes etc...\)_ contenus dans
 
 Définit la liste des composants pouvant être utilisés par les modules qui importent celui-ci.
 
-{% hint style="warning" %}
-Les composants non-exportés ne peuvent être utilisés que par les composants contenus dans le module.
-{% endhint %}
 
-{% hint style="success" %}
+Les composants non-exportés ne peuvent être utilisés que par les composants contenus dans le module.
+
+
 Pour exporter un composant lors de sa génération par Angular CLI, il faut ajouter l'option `--export` : `yarn ng generate component --export book/book-preview`.
 
 Pour éviter de lutter contre les oublis, une astuce consiste à **ajouter un "script" à votre fichier `package.json`** pour **unifier la façon de générer vos composants**.
-{% endhint %}
 
-{% code-tabs %}
-{% code-tabs-item title="package.json" %}
+
 ```javascript
 {
     "scripts": {
@@ -68,8 +62,7 @@ Pour éviter de lutter contre les oublis, une astuce consiste à **ajouter un "s
     }
 }
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+
 
 ```bash
 yarn generate:component book/book-preview
@@ -83,7 +76,7 @@ Définit la liste des dépendances du module. Il s'agit généralement de la lis
 
 ## Bonnes Pratiques
 
-{% hint style="success" %}
+
 La convention est de regrouper tous les composants dans le même dossier que le module.
 
 ```text
@@ -94,13 +87,11 @@ book/
         book-preview.component.html
     ...
 ```
-{% endhint %}
 
-{% hint style="success" %}
 Evitez les sous-arborescences _\(définition de modules à l'intérieur d'autres modules etc...\)._
 
 **Flat is better than nested.**
-{% endhint %}
+
 
 
 
