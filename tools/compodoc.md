@@ -38,7 +38,6 @@ Merci à Vincent OGLOBLINSKY pour sa contribution !
 
 [https://github.com/vogloblinsky](https://github.com/vogloblinsky)
 
-{% embed url="https://github.com/vogloblinsky" %}
 
 [https://twitter.com/vogloblinsky](https://twitter.com/vogloblinsky)
 
