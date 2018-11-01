@@ -163,7 +163,7 @@ Il est également possible de **passer des paramètres optionnels par "query str
 Le service **`ActivatedRoute` décrit l'état** actuel du "router".  
 Il permet au composant associé à la "route" de **récupérer les paramètres via les propriétés `paramMap` et `queryParamMap`**.
 
-{% hint style="info" %}
+
 Les propriétés **`paramMap` et `queryParamMap` sont des `Observable`s** car par optimisation, en **naviguant vers la même route mais avec des paramètres différents** _\(e.g. `/books/123` =&gt; `/books/456`\)_, Angular **ne recharge pas le composant** mais propage les nouveaux paramètres via ces `Observable`s.
 
 
