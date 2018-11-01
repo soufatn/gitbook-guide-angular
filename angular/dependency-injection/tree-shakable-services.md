@@ -8,8 +8,7 @@ Désormais, les définitions du "provider" et de la portée du service peuvent s
 
 Il suffit alors de déclarer un service de cette façon :
 
-{% code-tabs %}
-{% code-tabs-item title="book-repository.ts" %}
+
 ```typescript
 @Injectable({
     providedIn: 'root'
@@ -17,21 +16,19 @@ Il suffit alors de déclarer un service de cette façon :
 export class BookRepository {
 }
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+
 
 ... pour pouvoir ensuite l'injecter partout dans l'application.
 
-{% hint style="info" %}
+
 `providedIn: 'root'` indique que le provider est ajouter au "root injector".
 
 Il est également possible de sélectionner un module _\(`providedIn: BookCoreModule`\)_ pour que le service ne soit disponible que si le module associé est importé.
-{% endhint %}
+
 
 Il est ensuite possible de personnaliser l'instanciation avec `useValue`, `useClass`, `useFactory` etc...
 
-{% code-tabs %}
-{% code-tabs-item title="book-repository.ts" %}
+
 ```typescript
 @Injectable({
     providedIn: 'root',
@@ -42,8 +39,7 @@ Il est ensuite possible de personnaliser l'instanciation avec `useValue`, `useCl
 export class BookRepository {
 }
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+
 
 ## Avantages
 
