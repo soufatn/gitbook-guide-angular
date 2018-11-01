@@ -33,9 +33,9 @@ Un module qui ne met à disposition que des services _\(e.g. : `HttpClientModule
 
 Un module ne contenant quasiment que des composants _\(généralement de type "presentational component"\) \(e.g. `MaterialButtonModule`\)._
 
-{% hint style="success" %}
+
 A moins de produire une librairie utilisée par plusieurs équipes _\(librairie open-source\)_, il est préférable d'exporter tous les composants pour éviter les mauvaises surprises d'export manquant lors de leur utilisation par les copains.
-{% endhint %}
+
 
 ## Routed Feature Module
 
