@@ -184,7 +184,7 @@ class Customer extends CustomerSchema {
 }
 ```
 
-{% hint style="success" %}
+
 Dans une approche plus fonctionnelle et avec un souci de séparation des responsabilités, la méthode `Customer.getName` pourrait être déplacée dans une classe `CustomerHelper:`
 
 ```typescript
@@ -194,5 +194,5 @@ class CustomerHelper {
     }
 }
 ```
-{% endhint %}
+
 
