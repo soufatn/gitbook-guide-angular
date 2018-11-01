@@ -30,7 +30,7 @@ new Customer('Foo', 123);
 error TS2345: Argument of type '123' is not assignable to parameter of type 'string'.
 ```
 
-{% hint style="warning" %}
+
 Par défaut, les paramètres et propriétés sont de type `any`.  
 Ils sont alors compatibles avec tous les autres types.  
 Si nous n'avions pas typé les paramètres du constructeur, nous aurions pu instancier l'objet avec des propriétés contenant des valeurs de type autre que `string`.
@@ -55,7 +55,7 @@ customer.firstName.toUpperCase();
 ```
 
 ... mais les problèmes apparaîtront en runtime car `customer.firstName` sera de type `number` et n'aura donc pas de méthode `toUpperCase`.
-{% endhint %}
+
 
 ## Raccourci pour les paramètres ordonnées du constructeur
 
