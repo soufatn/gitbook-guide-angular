@@ -2,8 +2,7 @@
 
 ## Création d'une classe
 
-{% tabs %}
-{% tab title="ES6 Class" %}
+
 ```javascript
 class Customer {
 
@@ -18,9 +17,7 @@ class Customer {
 
 }
 ```
-{% endtab %}
 
-{% tab title="Legacy Prototype" %}
 ```javascript
 var Customer = function(firstName, lastName) {
     this.firstName = firstName;
@@ -34,8 +31,7 @@ Customer.prototype = {
 }
 
 ```
-{% endtab %}
-{% endtabs %}
+
 
 ## Visibilité
 
@@ -89,7 +85,7 @@ customer.firstName = 'Foo';
 console.log(customer.firstName); // Foo
 ```
 
-{% hint style="danger" %}
+
 Ne les utilisez pas.
 
 L'implémentation de propriétés peut s'avérer pratique dans certains cas extrêmes tels que l'intégration d'une librairie "legacy", mocking, décoration pour "type checking" etc...
@@ -112,7 +108,7 @@ request.user;
 ```
 
 _Toute ressemblance avec du code existant est fortuite._
-{% endhint %}
+
 
 ## Héritage
 
@@ -128,17 +124,15 @@ export class WishtackProduct extends Product {
 }
 ```
 
-{% hint style="warning" %}
 Evitez l'héritage...
 
 ... et préférez la composition !
-{% endhint %}
+
 
 ## Bonnes pratiques
 
-{% hint style="success" %}
+
 En l'absence de notion de "class fields", il est recommandé d'initialiser toutes les attributs dans le constructeur. Autrement, il est difficile de déterminer les attributs d'une classe et les attributs présents sur une instance dépendront alors des méthodes appelées.
-{% endhint %}
 
 
 
