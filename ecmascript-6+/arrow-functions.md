@@ -91,21 +91,20 @@ const cheapProductTitleList = productList
     .map(product => product.title);
 ```
 
-{% hint style="warning" %}
+
 En cas de shadowing de nom de variable, évitez les variables à une lettre ou des noms génériques.
 
 `filter(u => u.id === user.id)`
 
 `filter(it => it.id === user.id)`
-{% endhint %}
 
 
 
-{% hint style="success" %}
+
 Il est commun de préfixer par un underscore \`\_\` les variables servant à itérer.
 
 `filter(_user => _user.id === user.id`_`)`_
-{% endhint %}
+
 
 
 
