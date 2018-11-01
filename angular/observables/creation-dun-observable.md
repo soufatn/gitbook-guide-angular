@@ -37,9 +37,9 @@ DONE!
 Vous remarquerez quelques similitudes avec [la création d'une `Promise`](../callback-hell-vs.-promise-vs.-async-await/promise.md).  
 Le duo de paramètres `resolve` et `reject` est remplacé par un objet `Observer` disposant des méthodes `next`,  `error`,  `complete`.
 
-{% hint style="danger" %}
+
 En omettant l'appel à la méthode `complete`, nous produisons un `Observable` infini et risquons des fuites mémoire si l'on oublie d'`unsubscribe`.
-{% endhint %}
+
 
 ## Erreur
 
@@ -71,9 +71,9 @@ data$.subscribe({
 Error: Oups!
 ```
 
-{% hint style="info" %}
+
 Une fois les méthodes `error` ou `complete` appelées, les appels suivants aux méthodes `next`, `error` et `complete` sont simplement ignorés.
-{% endhint %}
+
 
 ## "Teardown logic"
 
