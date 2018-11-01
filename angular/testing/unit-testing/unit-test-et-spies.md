@@ -81,7 +81,7 @@ describe('PickyWeatherStation', () => {
 
 ```
 
-{% hint style="warning" %}
+
 **Pensez à toujours vérifier que vos "spies" sont appelés avec les bons paramètres et le bon nombre de fois.**
-{% endhint %}
+
 
