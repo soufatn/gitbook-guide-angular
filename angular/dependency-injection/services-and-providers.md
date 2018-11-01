@@ -118,7 +118,7 @@ Il est préférable d'éviter cette utilisation.
 Dans le cas d'une classe, cela voudrait dire que l'objet est instancié avant le démarrage de l'application et pourrait ne jamais être utilisé.
 
 Dans le cas d'une constante, cf. [Class vs Injection Token](class-vs-injection-token.md).
-{% endhint %}
+
 
 ### `useFactory`
 
