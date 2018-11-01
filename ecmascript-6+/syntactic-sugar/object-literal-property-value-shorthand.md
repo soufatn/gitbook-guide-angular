@@ -28,13 +28,13 @@ const user = {
 };
 ```
 
-{% hint style="info" %}
+
 A vous de définir votre style guide à ce sujet dans votre équipe.
 
 Si l'écosystème JavaScript est nouveau pour l'équipe, il vaut mieux éviter ce genre de raccourcis.
-{% endhint %}
 
-{% hint style="warning" %}
+
+
 Méfiez-vous des éditeurs qui n'arrivent pas à "refactor" les "object shorthands".
 
 Chez Wishtack, nous nous sommes interdits leur utilisation jusqu'au support de ce refactoring par IntelliJ / WebStorm.
@@ -44,7 +44,7 @@ Chez Wishtack, nous nous sommes interdits leur utilisation jusqu'au support de c
 
 
 ![Object Literal Property Value Shorthand refactoring fail avec VSCode](../../.gitbook/assets/vscode-shorthanded-properties.gif)
-{% endhint %}
+
 
 
 
