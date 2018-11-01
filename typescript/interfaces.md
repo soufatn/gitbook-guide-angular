@@ -34,14 +34,14 @@ const cache = new Cache();
 cache.setItem('current-user', new Customer());
 ```
 
-{% hint style="success" %}
+
 Les "styles guides" TypeScript et Angular découragent l'utilisation du préfixe `I` pour les interfaces.
 
 Cela est principalement lié au deux raisons suivantes :
 
 * Au fil des refactorings, les classes deviennent des interfaces avec plusieurs implémentations.
 * Grâce à l'injection de dépendance, nous travaillerons la plupart du temps avec des interfaces. Le code perd alors en lisibilité si tous les types sont préfixés par des `I`.
-{% endhint %}
+
 
 ## Function interface
 
