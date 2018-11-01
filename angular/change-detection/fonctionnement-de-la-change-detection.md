@@ -16,9 +16,9 @@ Pour détecter les changements, Angular utilise la librairie [Zone.js](https://g
 
 Avant le chargement d'Angular, Zone.js procède au [Monkey patching ](https://en.wikipedia.org/wiki/Monkey_patch)des fonctions natives permettant d'inscrire des "callbacks" associées à des traitements asynchrones \_\(e.g. `setTimeout`\) \_afin de pouvoir détecter chaque "tick" et notifier Angular.
 
-{% hint style="info" %}
+
 Zone.js est également utilisé pour reconstruire des "callstacks" d'appels asynchrones.
-{% endhint %}
+
 
 ## Fonctionnement de la Change Detection
 
@@ -45,67 +45,51 @@ Cela permet de détecter les problèmes de conception ou d'implémentation tels 
 
 ![Angular Change Detection](../../.gitbook/assets/angular-change-detection.gif)
 
-{% tabs %}
-{% tab title="1" %}
+
 ![](../../.gitbook/assets/1.jpg)
-{% endtab %}
 
-{% tab title="2" %}
+
 ![](../../.gitbook/assets/2.jpg)
-{% endtab %}
 
-{% tab title="3" %}
+
 ![](../../.gitbook/assets/3.jpg)
-{% endtab %}
 
-{% tab title="4" %}
 ![](../../.gitbook/assets/4.jpg)
-{% endtab %}
 
-{% tab title="5" %}
+
 ![](../../.gitbook/assets/5.jpg)
-{% endtab %}
 
-{% tab title="6" %}
+
 ![](../../.gitbook/assets/6.jpg)
-{% endtab %}
 
-{% tab title="7" %}
+
 ![](../../.gitbook/assets/7.jpg)
-{% endtab %}
 
-{% tab title="8" %}
+
 ![](../../.gitbook/assets/8.jpg)
-{% endtab %}
 
-{% tab title="9" %}
+
 ![](../../.gitbook/assets/9.jpg)
-{% endtab %}
 
-{% tab title="10" %}
+
 ![](../../.gitbook/assets/10.jpg)
-{% endtab %}
 
-{% tab title="11" %}
+
 ![](../../.gitbook/assets/11.jpg)
-{% endtab %}
 
-{% tab title="12" %}
+
 ![](../../.gitbook/assets/12.jpg)
-{% endtab %}
 
-{% tab title="13" %}
+
 ![](../../.gitbook/assets/13.jpg)
-{% endtab %}
 
-{% tab title="14" %}
+
 ![](../../.gitbook/assets/14.jpg)
-{% endtab %}
 
-{% tab title="15" %}
+
+
 ![](../../.gitbook/assets/15.jpg)
-{% endtab %}
-{% endtabs %}
+
 
 
 
