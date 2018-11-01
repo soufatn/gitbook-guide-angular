@@ -2,9 +2,9 @@
 
 Une dépendance peut être de type `string` ou "objet literal" ou même sans type. Cf. [https://angular.io/api/core/InjectionToken](https://angular.io/api/core/InjectionToken).
 
-{% hint style="danger" %}
+
 Pour des raisons de lisibilité et de maintenabilité, évitez l'utilisation d'`InjectionToken` et préférez l'utilisation de classes.
-{% endhint %}
+
 
 Au lieu de :
 
