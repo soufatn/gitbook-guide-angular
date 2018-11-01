@@ -10,8 +10,7 @@ Il suffit d'utiliser les 3 fonctions suivantes pour implémenter un premier test
 * `it` : pour définir une "spec" _\(ou un test\)_.
 * `expect` : pour implémenter les assertions.
 
-{% code-tabs %}
-{% code-tabs-item title="calculator.spec.ts" %}
+
 ```typescript
 import { Calculator } from './calculator';
 
@@ -27,8 +26,7 @@ describe('Calculator', () => {
 
 });
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+
 
 ![Output Console](../../../.gitbook/assets/karma-output-console.png)
 
@@ -43,8 +41,7 @@ Comme dans tous les frameworks de tests unitaires, on peut définir des logique 
 
 A titre d'exemple, nous pouvons utiliser `beforeEach` afin de **factoriser l'instanciation** de la classe `Calculator` et surtout d'avoir **une nouvelle instance pour chaque "spec"**.
 
-{% code-tabs %}
-{% code-tabs-item title="calculator.spec.ts" %}
+
 ```typescript
 import { Calculator } from './calculator';
 ​
@@ -62,11 +59,9 @@ describe('Calculator', () => {
 ​
 });
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
 
-{% hint style="info" %}
+
 Les fonctions `beforeEach` et `afterEach` peuvent être appelées plus d'une fois afin de définir **plusieurs fonctions de "setup" et de "tear down"**.  
 Ces fonctions seront **appelées dans l'ordre** de déclaration.
-{% endhint %}
+
 
