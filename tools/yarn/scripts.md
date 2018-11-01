@@ -120,15 +120,13 @@ npm run hello -- -s
                 ||     ||
 ```
 
-{% hint style="info" %}
+
 Donc pour résumer :
 
 `yarn hello -s` &lt;=&gt; `npm run hello -- -s`
 
 A vous de choisir.
-{% endhint %}
 
-{% hint style="danger" %}
 Pour remédier à certains de ces problèmes et apporter de nouvelles fonctionnalités, l'équipe NPM a produit une nouvelle commande `npx` que l'on vous recommande d'éviter principalement  pour des raisons de sécurité.  
 **Le danger de cette commande est qu'elle installe automatiquement le module que vous lui passez en paramètre et l'exécute immédiatement.**
 
@@ -147,7 +145,7 @@ Error: Cannot find module './hello'
 Fiouf ! Nous venons d'installer inconsciemment le module run \([https://yarnpkg.com/en/package/run](https://yarnpkg.com/en/package/run)\) qui a ensuite essayer d'exécuter un fichier hello de notre projet. 😱
 
 > StackOverflow + Social Engineering = Remote Code Execution
-{% endhint %}
+
 
 
 
