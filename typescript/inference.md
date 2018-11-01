@@ -229,5 +229,10 @@ productRepository.getMatchingItemList(product => {
 
 ![TypeScript type inference + refactoring](../.gitbook/assets/typescript-inference-2.gif)
 
+
+
 ![TypeScript type inference + refactoring error detection](../.gitbook/assets/typescript-inference-3.gif)
+
+
+
 
