@@ -6,8 +6,7 @@ Une application Angular est généralement composé d'un “root component“ qu
 
 Ce composant est utilisé dans le fichier `src/index.html` qui est la page HTML accueillant l'application Angular.
 
-{% code-tabs %}
-{% code-tabs-item title="src/index.html" %}
+
 ```markup
 <!doctype html>
 <html lang="en">
@@ -19,8 +18,7 @@ Ce composant est utilisé dans le fichier `src/index.html` qui est la page HTML 
 </body>
 </html>
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+
 
 Il s'agit du tag HTML `<wt-root>` utilisant le préfixe `wt` choisi lors de la création de l'application.
 
@@ -28,8 +26,7 @@ Il s'agit du tag HTML `<wt-root>` utilisant le préfixe `wt` choisi lors de la c
 
 Le composant est défini dans le fichier `src/app/app.component.ts` dont voici une version plus minimaliste :
 
-{% code-tabs %}
-{% code-tabs-item title="src/app.component.ts" %}
+
 ```typescript
 import { Component } from '@angular/core';
 
@@ -42,8 +39,7 @@ import { Component } from '@angular/core';
 export class AppComponent {
 }
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+
 
 **Un composant Angular n'est rien d'autre qu'une classe...**
 
@@ -64,19 +60,18 @@ templateUrl: './app.component.html'
 
 Le résultat sera identique _\(le fichier HTML n'est pas téléchargé en runtime mais plutôt consommé au "build"\)_ mais le code sera plus clair et la "separation of concerns" mieux respectée.
 
-{% hint style="success" %}
+
 La convention de nommage pour un composant est la suivante :
 
 * Les fichiers sont en "kebab-case" suffixés par `.component.ext`. _\(e.g. :_ `book-preview.component.ts` & `book-preview.component.html`_\)_
 * La classe est en "PascalCase" suffixée par `Component`. _\(e.g. :_ `BookPreviewComponent`_\)_
 * Le sélecteur CSS doit être un sélecteur de tag en "kebab-case" préfixé par le suffixe du produit. _\(e.g. :_ `wt-book-preview`_\)._
-{% endhint %}
 
-{% hint style="warning" %}
+
 Le squelette par défaut ne respecte pas la dernière règle _\(utilisation de `wt-root` au lieu de `wt-app`\)_.
 
 N'hésitez pas à "refactor".
-{% endhint %}
+
 
 ![Selector refacotoring](../../.gitbook/assets/refactor-selector.gif)
 
@@ -86,5 +81,5 @@ N'hésitez pas à "refactor".
 
 ## Démo StackBlitz
 
-{% embed url="https://stackblitz.com/github/wishtack/wishtack-book-shop/tree/1-bootstrap" %}
+[https://stackblitz.com/github/wishtack/wishtack-book-shop/tree/1-bootstrap](https://stackblitz.com/github/wishtack/wishtack-book-shop/tree/1-bootstrap)
 
