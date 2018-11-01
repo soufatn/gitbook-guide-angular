@@ -18,11 +18,11 @@ Angular repose principalement sur une approche MVC où :
 
 Malheureusement, il arrive souvent _\(et dans de nombreux exemples_ [_https://angular.io/guide/user-input\#get-user-input-from-a-template-reference-variable_](https://angular.io/guide/user-input#get-user-input-from-a-template-reference-variable)_\)_  que l'on cède à une approche impérative traditionnelle où le "controller" se permet d'accéder explicitement à la "view" pour lire ou modifier son contenu.
 
-{% hint style="danger" %}
+
 Evitez d'accéder directement à votre "view" depuis le "controller" via des "template local variables" ou le décorateur `@ViewChild` !
 
 Avec cette approche impérative, on ne respecte plus le cycle MVC, on crée alors une dépendance entre le "controller" et la "view" que nous avions éviter jusqu'à présent et le "model" n'est plus la "single source of truth".
-{% endhint %}
+
 
 Cela est bien sûr inévitable dans des cas très particuliers, localisés et bas niveau _\(e.g. : implémentation d'un wrapper Angular pour une librairie JavaScript\)_.
 
