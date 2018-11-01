@@ -33,19 +33,17 @@ Lorsque vous recherchez _une action_, le **raccourci clavier actif** apparaît �
 
 [https://resources.jetbrains.com/storage/products/intellij-idea/docs/IntelliJIDEA\_ReferenceCard.pdf](https://resources.jetbrains.com/storage/products/intellij-idea/docs/IntelliJIDEA_ReferenceCard.pdf)
 
-{% embed url="https://resources.jetbrains.com/storage/products/intellij-idea/docs/IntelliJIDEA\_ReferenceCard.pdf" %}
 
 ## 10 Raccourcis indispensables à connaître
 
 [https://blog.jetbrains.com/webstorm/2015/06/10-webstorm-shortcuts-you-need-to-know/](https://blog.jetbrains.com/webstorm/2015/06/10-webstorm-shortcuts-you-need-to-know/)
 
-{% embed url="https://blog.jetbrains.com/webstorm/2015/06/10-webstorm-shortcuts-you-need-to-know/" %}
+
 
 ## Démonstration de WebStorm avec Victor Savkin
 
 [https://www.youtube.com/watch?v=upgjCMHGpwo](https://www.youtube.com/watch?v=upgjCMHGpwo)
 
-{% embed url="https://www.youtube.com/watch?v=upgjCMHGpwo" %}
 
 ## Remerciement <a id="remerciement"></a>
 
@@ -53,7 +51,7 @@ Merci à Yannick BIET pour sa contribution !
 
 [https://github.com/YannickBiet](https://github.com/YannickBiet)
 
-{% embed url="https://github.com/YannickBiet" %}
+
 
 [https://twitter.com/yannickbiet](https://twitter.com/yannickbiet?lang=fr)
 
