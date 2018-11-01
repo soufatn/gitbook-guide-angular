@@ -95,8 +95,6 @@ main();
 
 Quel est l'ordre d'exécution ?
 
-{% tabs %}
-{% tab title="🧐" %}
 ```javascript
 var value;
 
@@ -110,9 +108,7 @@ setTimeout(function () {
     console.log(value); // ???
 }, 200);
 ```
-{% endtab %}
 
-{% tab title="👍" %}
 ```javascript
 var value;
 
@@ -126,13 +122,10 @@ setTimeout(function () {
     console.log(value); // 2 - VALUE
 }, 200);
 ```
-{% endtab %}
-{% endtabs %}
 
 Et dans ce cas ?
 
-{% tabs %}
-{% tab title="🧐" %}
+
 ```javascript
 function main() {
 
@@ -154,9 +147,7 @@ function main() {
 
 main();
 ```
-{% endtab %}
 
-{% tab title="👍" %}
 ```javascript
 function main() {
 
@@ -178,8 +169,7 @@ function main() {
 
 main();
 ```
-{% endtab %}
-{% endtabs %}
+
 
 ### Fonctionnement de l'Event Loop
 
@@ -189,7 +179,12 @@ main();
 
 ![Event Loop](../.gitbook/assets/event-loop.jpg)
 
-{% embed url="https://www.youtube.com/watch?v=8aGhZQkoFbQ" caption="What the heck is the event loop anyway?" %}
+
+[https://www.youtube.com/watch?v=8aGhZQkoFbQ](https://www.youtube.com/watch?v=8aGhZQkoFbQ)
+
+
+
+
 
 
 
