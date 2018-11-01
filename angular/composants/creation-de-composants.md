@@ -15,9 +15,9 @@ yarn ng generate component book/book-preview
 
 Nous avons décidé d'indiquer le "path" cible `book/` afin de regrouper tous les composants _\(et autres fichiers\)_ associés à la fonctionnalité "book" dans ce dossier là. Ce dossier deviendra plus tard un "[feature module](../project-structure-and-modules/)".
 
-{% hint style="info" %}
+
 Pour un projet contenant une seule application, le "root path" est `src/app`.
-{% endhint %}
+
 
 ![G&#xE9;n&#xE9;ration d&apos;un composant avec Angular CLI](../../.gitbook/assets/yarn-ng-generate-component.png)
 
@@ -30,37 +30,34 @@ Cela génère le contenu suivant en respectant le "[style guide](https://angular
 
 ... et met à jour le fichier `app.module.ts` dont nous analyserons le contenu [plus tard]().
 
-{% hint style="info" %}
+
 N'oubliez pas d'ajouter et de "commit" les fichiers générés et modifiés.
-{% endhint %}
+
 
 Nous pouvons désormais utilisé notre nouveau composant dans le template du composant `app` par exemple :
 
 ![Insertion d&apos;un composant](../../.gitbook/assets/intellij-component-completion.gif)
 
-{% code-tabs %}
-{% code-tabs-item title="src/app/app.component.html" %}
+
 ```markup
 <wt-book-preview></wt-book-preview>
 <wt-book-preview></wt-book-preview>
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+
 
 ![Contenu par d&#xE9;faut du composant](../../.gitbook/assets/book-preview-empty.png)
 
 ## `yarn ng` vs. `ng`
 
-{% hint style="success" %}
+
 Il est recommandé d'utiliser la commande `yarn ng` au lieu de `ng` _\(contrairement à ce que l'on peut remarquer sur de nombreuses documentations et exemples\)_ pour les raisons suivantes :
 
 * La commande `yarn ng`, utilise la version d'Angular CLI installée localement sur votre projet. Tous les développeurs _\(et outils\)_ utilisent alors la même version.
 * La commande `ng` n'est pas forcément disponible globalement dans tous les environnements. Certains développeurs _\(ou outils\)_ risquent donc d'être surpris en exécutant la même commande sur leur environnement.
 
 Heureusement, si les versions de l'Angular CLI globale et la locale ne correspondent pas, Angular CLI lance la version locale en affichant une alerte.
-{% endhint %}
 
-{% hint style="success" %}
+
 Pour éviter tous ces ennuis et pour pouvoir factoriser dans votre équipe les options utilisées pour générer des composants, pourquoi ne pas ajouter un script à votre `package.json`:
 
 ```javascript
@@ -74,7 +71,7 @@ yarn generate:component book/book-preview
 ```
 
 ... au lieu de devoir expliquer la commande `ng g c` à chaque nouvel arrivant.
-{% endhint %}
+
 
 
 
