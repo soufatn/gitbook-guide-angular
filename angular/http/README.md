@@ -4,9 +4,9 @@ Dans une application Angular, la plupart des données proviennent d'API ReST où
 
 Pour produire des requêtes HTTP, Angular fournit un service `HttpClient` qui est un wrapper de la classe native \(et vieillissante\) `XMLHttpRequest`.
 
-{% page-ref page="pourquoi-httpclient.md" %}
+[Pourquoi HttpClient](pourquoi-httpclient.md)
 
-{% page-ref page="utilisation-de-httpclient.md" %}
+[Utilisation de HttpClient](utilisation-de-httpclient.md)
 
 
 
