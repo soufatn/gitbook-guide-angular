@@ -2,8 +2,7 @@
 
 Qui suis-je ?
 
-{% tabs %}
-{% tab title="🧐" %}
+
 ```javascript
 class Customer {
 
@@ -28,9 +27,7 @@ const customer = new Customer('Foo', 'BAR');
 
 customer.sayHiLater(); // ???
 ```
-{% endtab %}
 
-{% tab title="😱" %}
 ```javascript
 class Customer {
 
@@ -55,8 +52,7 @@ const customer = new Customer('Foo', 'BAR');
 
 customer.sayHiLater(); // TypeError: this.sayHi is not a function
 ```
-{% endtab %}
-{% endtabs %}
+
 
 ## Binding
 
