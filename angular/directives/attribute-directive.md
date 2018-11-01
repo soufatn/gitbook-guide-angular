@@ -71,7 +71,7 @@ export class HighlightDirective implements OnInit {
 
 Pour appliquer une directive à un élément, il suffit de lui **ajouter l'attribut** indiqué dans le `selector` de la directive.
 
-{% hint style="warning" %}
+
 Si le module contenant la directive n'est pas importé, **la directive ne sera pas activée sur l'élément** et Angular ne produit **aucune erreur** car pour ce dernier il ne s'agit que d'un attribut superflu.
 
 
