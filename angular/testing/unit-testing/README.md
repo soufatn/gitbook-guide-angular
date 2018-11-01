@@ -8,7 +8,7 @@ Grâce à [Angular CLI](../../../tools/angular-cli.md), **tous les outils** néc
 
 La commande **`yarn test`** permet de déclencher la commande [Angular CLI](../../../tools/angular-cli.md) **`ng test --watch`**.
 
-{% hint style="info" %}
+
 L'option `--watch` permet de relancer les tests unitaires **à chaque changement dans le code**.
 
 Cela permet de **s'assurer en temps réel** que les développements en cours n'ont **pas d'effets négatifs sur les tests existants** et également de savoir **quand la fonctionnalité est opérationnelle**.
@@ -21,7 +21,7 @@ Pour lancer les tests sur un environnement d'**intégration continue**, pensez �
     "test:singlerun": "ng test --code-coverage"
 }
 ```
-{% endhint %}
+
 
 La commande `ng test` lance les tests unitaires en utilisant [**Karma**](https://karma-runner.github.io/2.0/index.html) _\(ex testacular: Cf._ [_https://github.com/karma-runner/karma/issues/376_](https://github.com/karma-runner/karma/issues/376)_\)_.
 
@@ -39,9 +39,9 @@ Au lancement des tests :
 6. les tests sont exécutés sur le "browser" et les résultats sont transmis au serveur Karma,
 7. Karma **produit les rapports** en fonction des plugins activés : console, HTML, "code coverage" etc...
 
-{% hint style="info" %}
+
 Par défaut, tous les fichiers `.spec.ts` contenus dans le dossier `src` sont importés pour être exécuter. Cf. `src/test.ts`.
-{% endhint %}
+
 
 ### "Code Coverage"
 
@@ -49,29 +49,28 @@ L'option `--code-coverage` permet de produire un rapport indiquant quelles parti
 
 Les rapports sont produits dans le dossier `coverage` et contiennent des fichiers HTML "Human Readable" mais aussi d'autres formats tels que "lcov" pour une intégration plus facile avec les outils d'intégration continue.
 
-{% hint style="info" %}
-Cette option n'est pas activé par défaut pour éviter de ralentir les tests lancés avec l'option `--watch`.
-{% endhint %}
 
-{% hint style="warning" %}
+Cette option n'est pas activé par défaut pour éviter de ralentir les tests lancés avec l'option `--watch`.
+
+
 Le "code coverage" n'est indiqué que pour les fichiers qui sont importés par les tests unitaires.
 
 **Le code source qui n'est jamais importé par les tests unitaires n'est donc pas comptabilisé**.
-{% endhint %}
 
 
 
-{% page-ref page="jasmine.md" %}
 
-{% page-ref page="unit-test-synchrone.md" %}
+[Jasmine](jasmine.md)
 
-{% page-ref page="unit-test-asynchrone.md" %}
+[Unit-Test-Synchrone](unit-test-synchrone.md)
 
-{% page-ref page="unit-test-dun-service.md" %}
+[Unit-Test-Asynchrone](unit-test-asynchrone.md)
 
-{% page-ref page="unit-test-dun-composant.md" %}
+[Unit-Test d'un service](unit-test-dun-service.md)
 
-{% page-ref page="unit-test-et-httpclient.md" %}
+[Unit-Test d'un composant](unit-test-dun-composant.md)
+
+[Unit-Test et HttpClient](unit-test-et-httpclient.md)
 
 
 
