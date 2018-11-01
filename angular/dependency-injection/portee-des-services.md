@@ -44,9 +44,9 @@ Cela pose particulièrement problème pour les "**stateful services**".
 
 ## Feature Service Module
 
-{% hint style="success" %}
+
 Pour éviter le problème de double instanciation de "**stateful services**" décrit [ci-dessous](portee-des-services.md#lazy-loading), la bonne pratique la plus commune est de créer **des modules dédiés** à la définition des "providers" de "**stateful services**" qui seront ensuite importés uniquement par le "root module" `AppModule`.
-{% endhint %}
+
 
 ```typescript
 @NgModule({
