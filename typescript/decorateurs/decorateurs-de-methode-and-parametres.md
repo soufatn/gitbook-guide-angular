@@ -22,7 +22,7 @@ class Calculator {
 const calculator = new Calculator();
 ```
 
-{% hint style="warning" %}
+
 Remarquez le pattern de "currying" très fréquent dans l'implémentation de décorateurs.
 
 La syntaxe suivante :
@@ -44,7 +44,7 @@ const Noop = () => (target, key) => {
 ```
 
 A consommer avec modération.
-{% endhint %}
+
 
 
 
