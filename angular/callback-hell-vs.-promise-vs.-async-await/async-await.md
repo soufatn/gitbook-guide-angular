@@ -73,11 +73,10 @@ main()
     .catch(() => console.error('Failed!'));
 ```
 
-{% hint style="warning" %}
-`await` ne peut être utilisé que dans une fonction `async`.
-{% endhint %}
 
-{% hint style="info" %}
+`await` ne peut être utilisé que dans une fonction `async`.
+
+
 Une fonction `async` peut être appelée depuis n'importe quelle fonction et son type de retour sera une **`Promise`**.
-{% endhint %}
+
 
