@@ -6,7 +6,7 @@ Grâce à Webpack, Angular suit les imports de fichiers à partir de ce point d'
 
 `yarn build` =&gt; `ng build` =&gt; `webpack` =&gt; `dist/*`
 
-{% embed url="https://webpack.js.org/" %}
+[https://webpack.js.org](https://webpack.js.org/)
 
 ![Webpack](../../.gitbook/assets/webpack.png)
 
