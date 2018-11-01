@@ -43,7 +43,7 @@ On obtient alors l'erreur suivante :
 Timeout - Async callback was not invoked within timeout specified by jasmine.DEFAULT_TIMEOUT_INTERVAL.
 ```
 
-{% hint style="danger" %}
+
 Par défaut, la variable `jasmine.DEFAULT_TIMEOUT_INTERVAL` vaut **5 secondes**.
 
 **N'augmentez jamais cette valeur !**
@@ -54,7 +54,7 @@ Un test unitaire doit être F.I.R.S.T. :
 - **Repeatable**  
 - **Self-Validating**  
 - **Thorough & Timely**
-{% endhint %}
+
 
 La fonction `done` doit être **appelée explicitement** à la fin de la "spec".
 
@@ -75,11 +75,11 @@ describe('new planet rules', () => {
 
 Cette fois-ci, la "spec" **échoue** rapidement à cause de l'assertion.
 
-{% hint style="warning" %}
+
 Cette approche s'avère rapidement **pénible** à mettre en place et surtout "**Error-Prone**".
 
 Elle finit rapidement en [Callback Hell](../../callback-hell-vs.-promise-vs.-async-await/callback-hell.md) et "Race Conditions".
-{% endhint %}
+
 
 ## Solution n°2 : `Promise` et `async / await` ✌️
 
@@ -179,8 +179,7 @@ Cette approche a pour avantage :
 
 Testons cette station météo capricieuse : 
 
-{% code-tabs %}
-{% code-tabs-item title="picky-weather-station.ts" %}
+
 ```typescript
 import { Observable, timer } from 'rxjs';
 import { filter, map, mapTo } from 'rxjs/operators';
@@ -200,11 +199,8 @@ class PickyWeatherStation {
 
 }
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
 
-{% code-tabs %}
-{% code-tabs-item title="picky-weather-station.spec.ts" %}
+
 ```typescript
 describe('PickyWeatherStation', () => {
 
@@ -225,20 +221,18 @@ describe('PickyWeatherStation', () => {
 
 });
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+
 
 **Bien que l'assertion `expect(temperature).toEqual(-10)` soit erronée, la "spec" réussit.**
 
-{% hint style="warning" %}
+
 En effet, le "pipe" `filter(_city => _city !== 'Paris')` ignore la valeur émise par l'`Observable` `of(city)` dans ce cas ; **on obtient alors un `Observable` qui "complete" sans émettre aucune valeur**.
 
 **La fonction `async` ne détecte donc aucun traitement en attente** et **la "callback" du premier `subscribe`** **n'est jamais appelée**.
-{% endhint %}
 
-{% hint style="warning" %}
+
 Ce problème pourrait être résolu en utilisation la fonction `done` mais il est **dommage d'attendre une seconde de délai** due au "pipe" `delay(1000)`.
-{% endhint %}
+
 
 ## Solution n°4 : Fonction `fakeAsync()` 💪
 
@@ -351,19 +345,18 @@ it('should give temperature', fakeAsync(() => {
 }));
 ```
 
-{% hint style="info" %}
-Le test échoue alors car la "callback" n'a pas été appelée et `temperature` vaut donc `undefined`.
-{% endhint %}
 
-{% hint style="warning" %}
+Le test échoue alors car la "callback" n'a pas été appelée et `temperature` vaut donc `undefined`.
+
+
 Les méthodes `fakeAsync`, `tick` et `flush` sont généralement stables mais tout de même considérées comme expérimentales.
 
 En effet, dans le dernier exemple, la fonction `flush` ne fonctionne pas car il existe des **incompatibilités avec certains `Observable`s et opérateurs RxJS** manipulant le timer _\(par manque de Monkey Patching ?\),_ Cf. __[https://github.com/angular/angular/issues/10127](https://github.com/angular/angular/issues/10127)_._
-{% endhint %}
+
 
 #### Detection des effets de bord
 
-{% hint style="success" %}
+
 On pourrait recommander de **déclarer toutes les "specs" avec la fonction** **`fakeAsync`** afin d'**éviter tout effet de bord** dû à des traitements asynchrones ignorés par le test.
-{% endhint %}
+
 
