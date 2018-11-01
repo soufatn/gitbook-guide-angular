@@ -42,7 +42,7 @@ export class SomeStructuralDirective {
 }
 ```
 
-{% hint style="danger" %}
+
 Pour une meilleure maintenabilité et stabilité de vos applications, évitez l'implémentation de "Structural Directives".
-{% endhint %}
+
 
