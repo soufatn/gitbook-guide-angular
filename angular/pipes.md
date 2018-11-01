@@ -49,8 +49,7 @@ Pour créer un `Pipe` personnalisé, il faut :
 
 Le `Pipe` `price` ci-dessous permet d'afficher le prix d'un produit représenté avec la classe `Price` suivante :
 
-{% code-tabs %}
-{% code-tabs-item title="price.ts" %}
+
 ```typescript
 export class Price {
 
@@ -66,11 +65,8 @@ export class Price {
 
 }
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
 
-{% code-tabs %}
-{% code-tabs-item title="price.pipe.ts" %}
+
 ```typescript
 @Pipe({
     name: 'price'
@@ -91,11 +87,8 @@ export class PricePipe implements PipeTransform {
 
 }
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
 
-{% code-tabs %}
-{% code-tabs-item title="price.module.ts" %}
+
 ```typescript
 @NgModule({
     declarations: [
@@ -108,13 +101,11 @@ export class PricePipe implements PipeTransform {
 export class PriceModule {
 }
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+
 
 Le `Pipe` peut alors être utilisé dans **n'importe quel composant contenu dans un module qui importe le module** **`PriceModule`** :
 
-{% code-tabs %}
-{% code-tabs-item title="book-preview.component.ts" %}
+
 ```typescript
 export class BookPreviewComponent {
     bookPrice = new Price({
@@ -124,16 +115,12 @@ export class BookPreviewComponent {
     });
 }
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
 
-{% code-tabs %}
-{% code-tabs-item title="book-preview.component.html" %}
+
 ```markup
 <div>{{ bookPrice | price }}</div>
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+
 
 On obtient alors le résultat suivant :
 
@@ -147,8 +134,7 @@ Le **constructeur d'un `Pipe`** peut être utiliser pour **injecter des dépenda
 
 Dans notre cas, nous souhaitons injecter le `Pipe` `currency` afin de **profiter de ses fonctionnalités tout en simplifiant son utilisation**.
 
-{% code-tabs %}
-{% code-tabs-item title="price.pipe.ts" %}
+
 ```typescript
 @Pipe({
     name: 'price'
@@ -172,10 +158,8 @@ export class PricePipe implements PipeTransform {
 
 }
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
 
-{% hint style="warning" %}
+
 Malheureusement, Angular ne définit pas nativement de `providers` pour les `Pipe`s.
 
 En attendant la résolution de ce bug [https://github.com/angular/angular/issues/15107](https://github.com/angular/angular/issues/15107), une des solutions de contournement pour injecter un `Pipe` est de l'ajouter à la liste des `providers` d'un module importé par le module définissant notre Pipe.
@@ -198,7 +182,7 @@ export class InjetableCurrencyPipeModule {
 export class BookModule {
 }
 ```
-{% endhint %}
+
 
 ## Pureté du `Pipe`
 
@@ -206,13 +190,13 @@ export class BookModule {
 
 Par défaut, les `Pipe`s sont purs. C'est à dire que **leur méthode `transform` est une fonction pure**, la **valeur retournée ne dépend que des paramètres** reçus et les appels n'ont aucun effet de bord. Autrement dit, le `Pipe` est "stateless".
 
-{% hint style="warning" %}
+
 Par optimisation, à chaque [Change Detection](change-detection/), **Angular n'évalue les `Pipe`s purs** _\(i.e. appel de la méthode `transform`\)_ **que quand les paramètres changent**.
 
 **Angular ne considère que les paramètres ont changé que si leurs références ont changé**.
 
 Il faut donc **veiller au respect de l'**[**immutabilité**](change-detection/immutabilite.md).
-{% endhint %}
+
 
 ### Les `Pipe`s impurs
 
@@ -233,11 +217,11 @@ Nativement, seuls les `Pipe`s suivant sont impurs :
 * `json` : Etant donné qu'il est principalement utilisé pour le "debug", ce `Pipe` est impur car il est préférable que la valeur retournée soit mise à jour même si l'immutabilité n'est pas respectée. 
 * `slice` : Bien que ce `Pipe` fonctionnerait parfaitement en étant pur, il est probablement impur pour faciliter l'adoption d'Angular par la communauté car malheureusement l'immutabilité des `Array`s est rarement respectée par les développeurs Angular.
 
-{% hint style="danger" %}
+
 **Ne les utilisez pas !**
 
 L'implémentation de `Pipe`s impurs est un "code smell" qui révèle généralement des problèmes de conception.
-{% endhint %}
+
 
 
 
