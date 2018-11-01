@@ -9,17 +9,17 @@ Yarn a beaucoup inspiré les dernières versions d'NPM qui progresse tranquillem
 
 La liste des modules disponibles est accessible sur [https://yarnpkg.com](https://yarnpkg.com/) et [https://www.npmjs.com](https://www.npmjs.com).
 
-{% hint style="info" %}
+
 Nous vous recommandons d'utiliser yarnpkg.com dont les performances sont impressionnantes grâce à [Algolia](https://www.algolia.com/).
 
 Essayez par vous même !
-{% endhint %}
+
 
 ## Installation Yarn
 
-{% hint style="danger" %}
+
 Sur windows... [https://yarnpkg.com/en/docs/install\#windows-stable](https://yarnpkg.com/en/docs/install#windows-stable)
-{% endhint %}
+
 
 ... ou sur un système qui fonctionne :
 
