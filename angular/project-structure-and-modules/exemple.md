@@ -6,7 +6,7 @@
 
 ## Démo StackBlitz
 
-{% embed url="https://stackblitz.com/github/wishtack/wishtack-book-shop/tree/4-modules" %}
+
 
 
 
