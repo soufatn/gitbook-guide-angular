@@ -26,9 +26,9 @@ La méthode `unsubscribe` va donc :
 * **détruire l'`Observable`** _\(c'est à dire interrompre les traitements effectués par l'`Observable`\)_ si celui-ci est de type "**cold**" ;
 * éventuellement **libérer la mémoire** car en désinscrivant les "callbacks", le "garbage collector" libérera la mémoire occupée par les objets référencés dans les "callbacks" _\(s'ils ne sont plus référencés ailleurs\)_.
 
-{% hint style="danger" %}
+
 Il est **important d'`unsubscribe`** les `Observable`s dès qu'il n'y en a plus besoin afin d'éviter les **fuites mémoire**, la **consommation inutile de CPU** et les **effets de bord** associés à ces `Observable`s "zombies".
-{% endhint %}
+
 
 L'`unsubscribe` se fait généralement :
 
@@ -41,7 +41,6 @@ Dans certains cas, nous préférons l'utilisation du "pipe" `async` que nous ver
 
 [https://medium.com/@wishtack/rx-scavenger-the-rxjs-garbage-collector-b050099a00ea](https://medium.com/@wishtack/rx-scavenger-the-rxjs-garbage-collector-b050099a00ea)
 
-{% embed url="https://medium.com/@wishtack/rx-scavenger-the-rxjs-garbage-collector-b050099a00ea" %}
 
 [Rx-Scavenger](https://github.com/wishtack/wishtack-steroids/tree/master/packages/rx-scavenger) est un "Garbage Collector" de Subscription RxJS pour Angular.
 
