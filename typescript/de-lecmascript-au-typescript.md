@@ -36,9 +36,9 @@ class Customer {
 }
 ```
 
-{% hint style="success" %}
+
 La bonne pratique est de déclarer les propriétés avant le constructeur.
-{% endhint %}
+
 
 
 
