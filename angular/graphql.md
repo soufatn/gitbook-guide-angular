@@ -20,13 +20,13 @@ Le plugin GraphQL d'IntelliJ / WebStorm facilite la consommation d'APIs GraphQL 
 
 [https://plugins.jetbrains.com/plugin/8097-js-graphql](https://plugins.jetbrains.com/plugin/8097-js-graphql)
 
-{% embed url="https://plugins.jetbrains.com/plugin/8097-js-graphql" %}
+
 
 ## Services Query / Mutate
 
-{% hint style="success" %}
+
 Bien qu'il soit possible d'utiliser directement les méthodes `query`, `mutate` et `watchQuery` du service `Apollo` pour exécuter des _queries_ et _mutations_, depuis n'importe quel endroit de votre application, **il est préférable d'utiliser des services dédiés à chaque `query` ou `mutation`** qui héritent respectivement des classes `Query` et `Mutation`.
-{% endhint %}
+
 
 ```typescript
 @Injectable({
@@ -52,14 +52,13 @@ this._userListQuery.fetch()
     .subscribe(({data}) => this.userList = data.users);
 ```
 
-{% hint style="info" %}
-Le service dispose également d'une méthode watch qui vous permet d'observer les changements en cas d'activation du polling _\(option `pollInterval`\)_ ou encore en cas de mise à jour du cache local par exemple.
-{% endhint %}
 
-{% hint style="danger" %}
+Le service dispose également d'une méthode watch qui vous permet d'observer les changements en cas d'activation du polling _\(option `pollInterval`\)_ ou encore en cas de mise à jour du cache local par exemple.
+
+
 Dans tous les cas, n'oubliez pas d'unsubscribe de l'`Observable` retourné ou d'utiliser RxScavenger.  
 [https://github.com/wishtack/wishtack-steroids/tree/master/packages/rx-scavenger](https://github.com/wishtack/wishtack-steroids/tree/master/packages/rx-scavenger)
-{% endhint %}
+
 
 ## Factorisation des queries grâce au fragments
 
@@ -67,5 +66,5 @@ Pensez à utiliser les fragments pour factoriser vos queries.
 
 [https://www.apollographql.com/docs/angular/features/fragments.html](https://www.apollographql.com/docs/angular/features/fragments.html)
 
-{% embed url="https://www.apollographql.com/docs/angular/features/fragments.html" %}
+
 
