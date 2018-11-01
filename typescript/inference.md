@@ -70,7 +70,7 @@ cityWeather = '🔥 Wishtack is cool ! 🔥';
 
 ... au lieu de :
 
-{% hint style="danger" %}
+
 ```typescript
 interface Weather {
     rainProbability: number;
@@ -108,7 +108,7 @@ let cityWeather: CityWeather = getCityWeather('Lyon');
 
 cityWeather = '🔥 Wishtack is hot ! 🔥';
 ```
-{% endhint %}
+
 
 ... ou :
 
@@ -139,7 +139,7 @@ cheapProductsTotalPrice = 'Oups!';
 
 ... au lieu de :
 
-{% hint style="danger" %}
+
 ```typescript
 interface Product {
     title: string;
@@ -168,7 +168,7 @@ let cheapProductsTotalPrice = productList
 
 cheapProductsTotalPrice = 'Oups!';
 ```
-{% endhint %}
+
 
 ## Inférence et callbacks
 
