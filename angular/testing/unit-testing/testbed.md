@@ -14,13 +14,12 @@ La méthode statique `configureTestingModule` prend en paramètre **une configur
     }));
 ```
 
-{% hint style="success" %}
+
 Utilisez `imports` pour **importer le module contenant le composant ou service \(ou autre\) à tester** afin d'éviter de redéfinir les imports des dépendances nécessaires.
 
 Cela permet aussi de s'assurer que le module à tester \(`BookModule`\) est autonome et qu'il est importe bien ses propres dépendances.
-{% endhint %}
 
-{% hint style="info" %}
+
 La méthode `compileComponents` est asynchrone _\(car elle télécharge les templateUrl dans des environnement hors CLI\)_ et retourne une `Promise`. C'est pour cette raison que le `beforeEach` de configuration utilise la fonction [`async`](unit-test-asynchrone.md).
-{% endhint %}
+
 
