@@ -1,10 +1,10 @@
 # Utilisation dans un Service
 
-{% hint style="success" %}
+
 Le service `HttpClient` ne devrait pas être utilisé directement depuis les composants.
 
 Il faut "wrapper" l'interaction avec les APIs dans des **services dédiés** et **réutilisables**.
-{% endhint %}
+
 
 Il nous faudrait donc un service que l'on puisse utiliser ainsi depuis nos composants :
 
@@ -17,8 +17,7 @@ bookRepository.getBookList()
 
 Ce service retourne un `Observable`. La **transformation** des données doit donc se faire **avec un opérateur dans le service**.
 
-{% code-tabs %}
-{% code-tabs-item title="book-repository.ts" %}
+
 ```typescript
 @Injectable({
     providedIn: 'root'
@@ -46,8 +45,7 @@ export class BookRepository {
 
 }
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+
 
 ## Astuce : n'oubliez pas les metadata
 
