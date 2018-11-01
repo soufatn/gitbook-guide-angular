@@ -4,9 +4,9 @@ Les directives sont des classes permettant d'**enrichir et modifier la vue** par
 
 Il en existe deux types :
 
-{% page-ref page="attribute-directive.md" %}
+[Attribute Directive](attribute-directive.md)
 
-{% page-ref page="structural-directive.md" %}
+[Structural Directive](structural-directive.md)
 
 > Les composants sont parfois considérés comme le 3ème type de `Directives`.
 
