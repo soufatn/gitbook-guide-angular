@@ -14,7 +14,7 @@ Pour le faire apparaître, il suffit d'appuyer deux fois sur la touche Shift et 
 
 Le système de tabulation permet de rechercher précisément "partout" ou dans un sous-ensemble de l'IDE (projet, action IDE, ...)
 
-Lorsque vous recherchez _une action_, le **raccourci clavier actif** apparaît à droite du nom de la commande, vous permettant d'apprendre au fur et à mesure de nouveaux raccourcis.
+Lorsque vous recherchez une action, le **raccourci clavier actif** apparaît à droite du nom de la commande, vous permettant d'apprendre au fur et à mesure de nouveaux raccourcis.
 
 ## Quelques raccourcis utiles
 
