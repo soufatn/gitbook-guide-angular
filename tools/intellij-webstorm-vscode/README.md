@@ -15,19 +15,18 @@ IntelliJ IDEA propose trois versions :
 * **ultimate** : payante mais complète,
 * **EAP \(Early Access Program\)** : ou la version next et pourtant stable. Elle est proposée avec une période d'essaie de 30 jours prolongée de 30 jours à chaque mise à jour \(sachant que les mises à jours sont fréquentes 🎉\).
 
-{% hint style="info" %}
+
 **IntelliJ Ultimate** ne coûte pas plus qu'un bon espresso ☕️par jour.
 
 **WebStorm** ne coûte pas plus cher qu'un café soluble par jour.
-{% endhint %}
 
-{% hint style="info" %}
+
 Si vous optez pour IntelliJ plutôt que WebStorm, pensez à installer le plugin **Karma** pour pouvoir facilement "debug" les tests unitaires.
-{% endhint %}
+
 
 ### JetBrains Toolbox
 
-{% embed url="https://www.jetbrains.com/toolbox/" %}
+[https://www.jetbrains.com/toolbox](https://www.jetbrains.com/toolbox/)
 
 JetBrains Toolbox est un outil très pratique vous permettant d'installer et mettre à jour les outils JetBrains de votre choix. Il permet aussi un accès rapide à vos projets.
 
@@ -41,17 +40,19 @@ Les IDEs JetBrains :
 * proposent des recommandations et actions "intelligentes",
 * proposent automatiquement des plugins adaptés à votre besoin et parfaitement préconfigurés.
 
-
+
 
 ## JetBrains IDE Support Chrome Extension
 
 Extension Chrome pour "debug" vos applications en toute simplicité.
 
-{% embed url="https://chrome.google.com/webstore/detail/jetbrains-ide-support/hmhgeddbohgjknpmjagkdomcpobmllji" %}
+[https://chrome.google.com/webstore/detail/jetbrains-ide-support/hmhgeddbohgjknpmjagkdomcpobmllji](https://chrome.google.com/webstore/detail/jetbrains-ide-support/hmhgeddbohgjknpmjagkdomcpobmllji)
+
+
 
 ## Visual Studio Code
 
-{% embed url="https://code.visualstudio.com/" %}
+[https://code.visualstudio.com](https://code.visualstudio.com/)
 
 Visual Studio Code est un éditeur de code Microsoft gratuit et open-source.
 
@@ -59,7 +60,7 @@ Ses points forts sont son prix et sa légèreté.
 
 Contrairement à IntelliJ, avec Visual Studio Code, c'est à vous de rechercher et configurer les plugins qu'il vous faut.
 
-{% hint style="info" %}
+
 Pensez à mesurer le temps passé à rechercher et configurer les plugins / extensions.
-{% endhint %}
+
 
