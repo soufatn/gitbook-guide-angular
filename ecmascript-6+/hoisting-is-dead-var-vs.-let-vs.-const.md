@@ -28,8 +28,7 @@ console.log(userName); // ReferenceError: userName is not defined
 
 ### Variable hoisting
 
-{% tabs %}
-{% tab title="🧐" %}
+
 ```javascript
 'use strict';
 
@@ -37,9 +36,8 @@ console.log(userName); // ???
 
 var userName = 'Foo BAR';
 ```
-{% endtab %}
 
-{% tab title="😱" %}
+
 ```javascript
 'use strict';
 
@@ -47,13 +45,11 @@ console.log(userName); // undefined
 
 var userName = 'Foo BAR';
 ```
-{% endtab %}
-{% endtabs %}
+
 
 ### Function hoisting
 
-{% tabs %}
-{% tab title="🧐" %}
+
 ```javascript
 'use strict';
 
@@ -67,9 +63,8 @@ function greetings() {
     console.log('HELLO!');
 }
 ```
-{% endtab %}
 
-{% tab title="😱" %}
+
 ```javascript
 'use strict';
 
@@ -83,8 +78,7 @@ function greetings() {
     console.log('HELLO!');
 }
 ```
-{% endtab %}
-{% endtabs %}
+
 
 ### Un peu mieux
 
@@ -139,15 +133,14 @@ const user = {
 user = null; // TypeError: Assignment to constant variable.
 ```
 
-{% hint style="warning" %}
+
 `const` n'est pas immutable.
 
 ```javascript
 user.firstName = 'John'; // OK!
 ```
-{% endhint %}
 
-{% hint style="success" %}
+
 Il est recommandé de déclarer toutes les variables en `const` sauf quand la réutilisation d'une variable s'avère inévitable.
 
 Cela évite de nombreuses erreurs d'inattention difficiles à diagnostiquer.
@@ -163,5 +156,5 @@ const user = {
 /* 🤢*/
 user = user.firstName; // TypeError: Assignment to constant variable.
 ```
-{% endhint %}
+
 
