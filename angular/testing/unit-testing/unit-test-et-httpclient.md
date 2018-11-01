@@ -46,7 +46,7 @@ describe('PickWeatherStation', () => {
 });
 ```
 
-{% hint style="success" %}
+
 Pensez à toujours ajouter l'`afterEach` ci-dessous afin de vérifier qu'il n'y a aucune requête en attente ! 
 
 ```typescript
@@ -54,5 +54,5 @@ afterEach(() => {
     httpTestingController.verify();
 });
 ```
-{% endhint %}
+
 
