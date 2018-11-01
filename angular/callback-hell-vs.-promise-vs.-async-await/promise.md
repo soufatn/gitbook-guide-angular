@@ -124,11 +124,11 @@ getCurrentCity()
     .catch(error => console.error(error));
 ```
 
-{% hint style="warning" %}
+
 Une `Promise` ne peut être "resolved" ou "rejected" qu'une seule fois.
 
 **C'est le premier appel qui gagne** et qui définit donc l'état final de la `Promise`, les appels suivants sont simplement ignorés.
-{% endhint %}
+
 
 > Vivement le jour où les appels superflus de "resolve" et "reject" déclencheront des erreurs.
 
