@@ -12,11 +12,11 @@ Grâce au système de "Routing", les utilisateurs peuvent :
 
 Angular fournit **nativement un module de "Routing"** pour répondre à ce besoin.
 
-{% page-ref page="mise-en-place-du-routing.md" %}
+[Mise en Place du Routing](mise-en-place-du-routing.md)
 
-{% page-ref page="lazy-loading.md" %}
+[Lazy Loading](lazy-loading.md)
 
-{% page-ref page="route-guards.md" %}
+[Route Guards](route-guards.md)
 
 
 
