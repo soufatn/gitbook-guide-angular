@@ -14,9 +14,9 @@ this.bookList$ = this.bookForm.valueChanges
     );
 ```
 
-{% hint style="info" %}
+{% hint style="info" %
 Tant que l'`Observable` n'est pas consommé _\(via un `subscribe`\)_, aucun traitement n'est exécuté.
-{% endhint %}
+
 
 
 
