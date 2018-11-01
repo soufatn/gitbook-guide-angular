@@ -4,17 +4,17 @@
 
 Installation des outils suivants :
 
-{% page-ref page="../tools/git.md" %}
+[Git](../tools/git.md)
 
-{% page-ref page="../tools/nodejs.md" %}
+[NodeJS](../tools/nodejs.md)
 
-{% page-ref page="../tools/yarn/" %}
+[Yarn](../tools/yarn/)
 
-{% page-ref page="../tools/angular-cli.md" %}
+[Angular CLI](../tools/angular-cli.md)
 
-{% page-ref page="../tools/intellij-webstorm-vscode/" %}
+[IntelliJ / Webstorm / VSCode](../tools/intellij-webstorm-vscode)
 
-{% page-ref page="../tools/chrome.md" %}
+[Chrome](../tools/chrome.md)
 
 ## Création de l'application Angular
 
