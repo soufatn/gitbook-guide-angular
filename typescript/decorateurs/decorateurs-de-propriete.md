@@ -39,11 +39,11 @@ class Customer {
 }
 ```
 
-{% hint style="warning" %}
+
 Il faut bien noter la différence entre les deux.
 
 La visibilité readonly n'est analysée que statiquement et peut donner une fausse impression de confiance.
 
 En revanche, le décorateur est exécuté en runtime et il faudra penser à le désactiver en production pour éviter son coût d'exécution.
-{% endhint %}
+
 
