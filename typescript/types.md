@@ -52,13 +52,13 @@ console.log(role); // 1
 console.log(Role[role]); // Developer
 ```
 
-{% hint style="danger" %}
+
 Comme dans de nombreux langages, il est préférable d'éviter les enums à auto-incrément pour les raisons suivantes :
 
 * Ce type d'enums décourage le refactoring car il est nécessaire de "rebuild" toutes les applications et librairies qui en dépendent. _\(On revient aux problèmes de compatibilité binaire etc...\)_
 * Le debug est moins pratique.
 * Il faut absolument passer par un serializer/deserializer pour communiquer la valeur avec d'autres applications, services etc...
-{% endhint %}
+
 
 ### string enum
 
@@ -77,13 +77,13 @@ console.log(role); // developer
 
 ### Number, String, Boolean and Object
 
-{% hint style="danger" %}
+
 N'utilisez jamais les types suivants : **Number**, **String**, **Boolean** et **Object**.
 
 Ce ne sont pas les types primitifs. Considérez-les comme "legacy".  
   
 Au lieu de `Object`, utilisez le type TypeScript `object`.
-{% endhint %}
+
 
 ## Paramètres optionnels
 
