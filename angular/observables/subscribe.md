@@ -10,9 +10,9 @@ const data$ = interval(1000);
 
 Tant qu'on ne s'inscrit pas à l'"observable", il ne se passe rien car cet observable est "lazy“.
 
-{% hint style="success" %}
+
 La convention de nommage est de suffixer les "observables" avec `$`.
-{% endhint %}
+
 
 ## `Observable.subscribe`
 
