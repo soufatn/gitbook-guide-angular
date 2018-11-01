@@ -10,8 +10,7 @@ La configuration du "Lazy Loading" se fait au niveau du "Routing".
 
 Le module de "Routing" `AppRoutingModule` peut **déléguer la gestion du "Routing" d'une partie de l'application à un autre module**. Ce module "Lazy Loaded" sera donc **chargé de façon asynchrone à la visite des "routes" dont il est en charge**.
 
-{% code-tabs %}
-{% code-tabs-item title="tu" %}
+
 ```typescript
 @NgModule({
     declarations: [
@@ -27,11 +26,8 @@ Le module de "Routing" `AppRoutingModule` peut **déléguer la gestion du "Routi
 export class AppModule {
 }
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
 
-{% code-tabs %}
-{% code-tabs-item title="src/app/app-routing.module.ts" %}
+
 ```typescript
 export const appRouteList: Routes = [
     {
@@ -60,11 +56,8 @@ export const appRouteList: Routes = [
 export class AppRoutingModule {
 }
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
 
-{% code-tabs %}
-{% code-tabs-item title="src/app/views/book/book-routing.module.ts" %}
+
 ```typescript
 export const bookRouteList: Routes = [
     {
@@ -86,29 +79,26 @@ export const bookRouteList: Routes = [
 export class BookRoutingModule {
 }
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+
 
 Cette configuration **délègue le "Routing"** de toute la partie **`/book/...`** de l'application **au module `BookRoutingModule`**.
 
-{% hint style="danger" %}
+
 Pour profiter du "Lazy Loading", **assurez-vous que les modules "Lazy Loaded" ne sont jamais chargé explicitement** _**\("Eagerly Loaded"\)**_ **!**
 
 Il faut donc **épurer au maximum les `imports` d'`AppModule`**.
-{% endhint %}
 
-{% hint style="info" %}
+
 La syntaxe `loadChildren: './views/book/book-routing.module#BookRoutingModule'` est un raccourci pour le chargement asynchrone de la classe `BookRoutingModule` :
 
 ```typescript
 loadChildren: () => import('./views/book/book-routing.module')
     .then(module => module.BookRoutingModule);
 ```
-{% endhint %}
 
-{% hint style="info" %}
+
 `BookRoutingModule` est à la fois un [Routed Feature Module](../project-structure-and-modules/feature-module.md) et un [Routing Module](../project-structure-and-modules/feature-module.md).
-{% endhint %}
+
 
 ### Résultat du "build"
 
