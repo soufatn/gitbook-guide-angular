@@ -4,7 +4,6 @@ Comment faire tant que toutes les fonctionnalités ne sont pas disponibles sur n
 
 ​[https://kangax.github.io/compat-table/es6/](https://kangax.github.io/compat-table/es6/)
 
-{% embed url="https://kangax.github.io/compat-table/es6/" %}
 
 ## Transpilation
 
