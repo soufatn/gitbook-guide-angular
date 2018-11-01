@@ -29,13 +29,12 @@ En lançant la commande `yarn install` _\(ou simplement_ `yarn`_\)_, Yarn procé
 2. Si la dépendance vient d'être ajoutée dans le fichier `package.json` ou si le fichier `yarn.lock` est absent _\(première installation\)_, il recherche la version la plus récente correspondant au critère indiqué : **`^2.4.1`** =&gt; **`>=2.4.1 & <3.0.0`** **`~5.5.10`** =&gt; **`>=5.5.10 & <5.6.0`**
 3. Il indique la version sélectionnée et installée dans le fichier `yarn.lock`.
 
-{% hint style="info" %}
-Les dépendances sont installées dans le dossier local `node_modules` qu'il ne faut jamais "commit".
-{% endhint %}
 
-{% hint style="success" %}
+Les dépendances sont installées dans le dossier local `node_modules` qu'il ne faut jamais "commit".
+
+
 Pensez à toujours "commit" le fichier yarn.lock et à lancer la commande yarn install, à chaque fois que vous mettez à jour votre code source. 
-{% endhint %}
+
 
 ## `yarn add`
 
@@ -72,12 +71,12 @@ Cela sert surtout aux applications NodeJS afin d'éviter d'installer inutilement
 
 Dans le cas des applications frontend, il s'avère qu'après le "build" de notre application, nous n'aurons plus besoin d'aucune dépendance.
 
-{% hint style="success" %}
+
 La convention est de mettre :
 
 * dans `dependencies`, toutes les dépendances dont une partie importante finira dans le résultat du build _\(e.g. : @angular/core, core-js, rxjs\)_. 
 * et dans les `devDependencies`, toutes les dépendances utilisées pour les tâches de build, automation et testing _\(e.g. : @angular/cli, jasmine, karma, protractor, typescript\)_.
-{% endhint %}
+
 
 Pour ajouter des dépendances dans cette section, il suffit d'ajouter l'option `--dev` à la commande `yarn add`.
 
