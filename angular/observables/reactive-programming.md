@@ -27,7 +27,7 @@ Le succès de cette approche est fortement lié à l'émergence des **Microservi
 
 L'implémentation la plus commune des `Observable`s est ReactiveX et elle est disponible dans différents langages : **RxJS**, **RxPython**, **RxJava**, **Rx.NET** etc...
 
-{% embed url="http://reactivex.io/" %}
+[http://reactivex.io](http://reactivex.io/)
 
 ## 
 
