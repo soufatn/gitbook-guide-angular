@@ -95,11 +95,11 @@ On obtient le résultat suivant :
 
 Dans cet exemple, on peut constater que ce n'est pas tout à fait l'opérateur qu'il nous faut car quand la valeur de la ville change, nous souhaitons interrompre l'`Observable` de température associé et passer à l'`Observable` de température de la nouvelle ville.
 
-{% hint style="warning" %}
+
 Dans la plupart des cas, nous préférerons utiliser `switchMap` à `mergeMap` pour éviter le comportement décrit ci-dessous.
 
 Toutefois, il existe des "use cases" où il faut absolument préférer `mergeMap` à `switchMap` pour éviter d'annuler certains traitements en cours lorsqu'une nouvelle valeur est produite.
-{% endhint %}
+
 
 ## `switchMap`
 
