@@ -4,8 +4,7 @@
 
 Avant toute chose, il est nécessaire d'ajoute le tag `base` au `head` du fichier `index.html` de l'application :
 
-{% code-tabs %}
-{% code-tabs-item title="src/index.html" %}
+
 ```markup
 <!doctype html>
 <html>
@@ -18,8 +17,7 @@ Avant toute chose, il est nécessaire d'ajoute le tag `base` au `head` du fichie
     </body>
 </html>
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+
 
 Ce tag indique **la base du `path` à partir de laquelle le "Routing" Angular rentre en jeu**.
 
@@ -31,12 +29,10 @@ Cette valeur est généralement personnalisé dans le cas où plusieurs applicat
 
 La configuration du "Routing" est transmise au module `RouterModule` lors de son import par le "root module" `AppModule`.
 
-{% hint style="success" %}
-Par bonne pratique, il est recommandé de placer cette configuration dans un module dédié `AppRoutingModule` importé par le "root module" `AppModule`.
-{% endhint %}
 
-{% code-tabs %}
-{% code-tabs-item title="src/app/app-routing.module.ts" %}
+Par bonne pratique, il est recommandé de placer cette configuration dans un module dédié `AppRoutingModule` importé par le "root module" `AppModule`.
+
+
 ```typescript
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
@@ -67,14 +63,12 @@ export const appRouteList: Routes = [
 export class AppRoutingModule {
 }
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
 
-{% hint style="warning" %}
+
 **`**` est une "wildcard"** qui "match" toutes les urls _\(sauf celles qui ont "match" les routes précédentes\)_.
 
 **Il faut donc faire attention à l'ordre des "routes".**
-{% endhint %}
+
 
 ### Configuration d'une "Route" avec Paramètres
 
@@ -93,11 +87,11 @@ export const appRouteList: Routes = [
 
 ### Configuration de l'Hébergement
 
-{% hint style="info" %}
+
 Pour le bon fonctionnement du "Routing", **il est important d'implémenter une règle de "rewrite" sur votre plateforme d'hébergement** afin que toutes les "routes" renvoient le même fichier `index.html` produit dans le dossier `dist` lors du "build" _\(`yarn build`\)_.
 
 Autrement, en accédant directement à une "route" de l'application, l'utilisateur obtiendrait une erreur 404.
-{% endhint %}
+
 
 ## 3. `<router-outlet>`
 
@@ -105,8 +99,7 @@ La configuration du "Routing" permet de définir quel composant afficher en fonc
 
 Pour **indiquer l'emplacement d'insertion du composant**, il faut utiliser la **directive `<router-outlet>`** directement dans le "root component" `AppComponent` _\(ou dans un "child component" dédié, e.g. `HomeLayoutComponent`\)_.
 
-{% code-tabs %}
-{% code-tabs-item title="app.component.html" %}
+
 ```markup
 <header>
 ...
@@ -116,8 +109,7 @@ Pour **indiquer l'emplacement d'insertion du composant**, il faut utiliser la **
 ...
 </footer>
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+
 
 En fonction de la "route" visitée, le **composant associé sera alors injecté en dessous du tag `router-outlet`** _\(et non à l'intérieur ou à la place du tag contrairement à ce que l'on pourrait supposer\)_.
 
@@ -131,9 +123,9 @@ Pour éviter ce problème, **le module de "Routing" Angular fournit la directive
 <a routerLink="/search">Search</a>
 ```
 
-{% hint style="info" %}
+
 La directive `routerLink` **génère tout de même l'attribut `href`** pour **faciliter la compréhension de la page** par les "browsers" ou "moteurs de recherche". Cela permet par exemple, d'**ouvrir un lien dans une nouvelle fenêtre** grâce au menu contextuel ou encore **copier le lien** d'une "route".
-{% endhint %}
+
 
 ### Construction Dynamique
 
@@ -173,10 +165,8 @@ Il permet au composant associé à la "route" de **récupérer les paramètres v
 
 {% hint style="info" %}
 Les propriétés **`paramMap` et `queryParamMap` sont des `Observable`s** car par optimisation, en **naviguant vers la même route mais avec des paramètres différents** _\(e.g. `/books/123` =&gt; `/books/456`\)_, Angular **ne recharge pas le composant** mais propage les nouveaux paramètres via ces `Observable`s.
-{% endhint %}
 
-{% code-tabs %}
-{% code-tabs-item title="book-detail-view.component.ts" %}
+
 ```typescript
 export class BookDetailViewComponent {
 
@@ -195,8 +185,7 @@ export class BookDetailViewComponent {
     
 }
 ```
-{% endcode-tabs-item %}
-{% endcode-tabs %}
+
 
 Pour simplifier la récupération des paramètres, **il est également possible d'utiliser la propriété** **`snapshot`** qui contient l'état actuel de la route _\(e.g. : `snapshot.paramMap.get('bookId')`\)_. **Le risque dans ce cas est de ne pas mettre à jour la vue** en cas de navigation vers la même route avec des paramètres différents.
 
