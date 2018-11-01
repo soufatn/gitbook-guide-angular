@@ -14,7 +14,7 @@ const add = (...valueList) => {
 add(0, 1, 2, 3); // 6
 ```
 
-{% hint style="warning" %}
+
 Il vaut mieux éviter ce type d'usage du "rest".  
 Cela réduit l'extensibilité de la fonction et il est préférable de prendre un paramètre de type `Array`.
 
@@ -25,7 +25,7 @@ const add = (valueList) => {
 
 add([1, 2, 3]); // 6
 ```
-{% endhint %}
+
 
 En revanche, cela peut s'avérer très pratique dans des cas de wrapping ou de décoration etc...
 
