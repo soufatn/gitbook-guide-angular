@@ -26,10 +26,10 @@ Il faut d'abord indiquer à Angular CLI que nous utiliserons Yarn plutôt que NP
 ng config cli.packageManager yarn --global
 ```
 
-{% hint style="danger" %}
+
 En cas de problème avec cette commande, vous pouvez ignorer cette étape puis ajouter l'option `--skip-install` afin d'éviter l'installation avec npm puis installer les dépendances manuellement avec `yarn`.  
 `ng new book-shop --prefix wt --skip-install && cd book-shop && yarn install`
-{% endhint %}
+
 
 La commande ci-dessous va créer un projet Angular _\(avec une application\)_ dans le dossier `book-shop`.
 
@@ -37,11 +37,11 @@ La commande ci-dessous va créer un projet Angular _\(avec une application\)_ da
 ng new book-shop --prefix wt
 ```
 
-{% hint style="info" %}
+
 L'option --prefix permet d'indiquer le préfixe que nous utiliserons pour nos composants Angular \(entre autres\) afin de les reconnaître rapidement dans le code HTML \(e.g.: &lt;wt-book-list&gt;\).
 
 Autrement, la valeur par défaut utilisée par Angular CLI est app  et notre composant se nommerait alors &lt;app-book-list&gt;. Ici, l'acronyme wt fait référence à Wishtack.
-{% endhint %}
+
 
 La commande `ng new` :
 
@@ -49,21 +49,19 @@ La commande `ng new` :
 2. Installe implicitement à l'aide de la commande `yarn install` toutes les dépendances indiquées par défaut dans le fichier `package.json` _\(sauf si l'on ajoute l'option `--skip-install`\)_. 
 3. Initialise un "repository" git et ajoute le fichier `yarn.lock` généré par l'étape précédente.
 
-{% hint style="info" %}
+
 Vous obtenez donc une application opérationnelle dont tous les fichiers ont été "commit" proprement.  
 Il vous suffit alors d'ajouter un "remote" pour partager votre code source avec les copains.  
 [https://git-scm.com/book/en/v2/Git-Basics-Working-with-Remotes](https://git-scm.com/book/en/v2/Git-Basics-Working-with-Remotes)  
 [https://help.github.com/articles/adding-a-remote/](https://help.github.com/articles/adding-a-remote/)
-{% endhint %}
 
 
 
-{% hint style="info" %}
 Le module `@angular/cli` installé globalement n'est utile que pour la création de l'application.  
 Pour la suite, le module `@angular/cli` sera installé localement dans chaque projet.
 
 Une fois le projet initialisé, les développeurs n'ont plus besoin d'installer le module `@angular/cli` globalement.
-{% endhint %}
+
 
 ## Développement
 
@@ -86,11 +84,11 @@ Cette commande est un "alias" pour `ng serve` qui lui-même lance un serveur de 
 
  Vous pouvez également lancer l'application _\(ou n'importe quel script yarn\)_ directement depuis l'IDE.
 
-![](../.gitbook/assets/intellij-yarn-start.gif)
+![yarn](../.gitbook/assets/intellij-yarn-start.gif)
 
 Et c'est parti :
 
-![](../.gitbook/assets/livereload.gif)
+![livereload](../.gitbook/assets/livereload.gif)
 
 ## Mise à jour
 
