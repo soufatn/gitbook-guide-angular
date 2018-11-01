@@ -176,9 +176,9 @@ Dans le dernier exemple du [chapitre sur les interfaces](interfaces.md#function-
 
 Toute la puissance de TypeScript repose sur cet art de typer le moins possible mais au bon endroit pour en profiter au maximum.
 
-{% hint style="success" %}
+
 La signature des fonctions de "callback" que vous attendez est l'un des éléments les plus stratégiques à typer.
-{% endhint %}
+
 
 ```typescript
 interface Product {
