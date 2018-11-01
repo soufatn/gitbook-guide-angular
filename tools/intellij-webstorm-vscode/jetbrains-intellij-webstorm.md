@@ -2,6 +2,7 @@
 
 Voici la liste des **raccourcis les plus utiles** à connaître pour l'utilisation des IDE JetBrains. Vous pourrez également retrouver sur le site de l'éditeur, une liste plus complète de [raccourcis claviers](https://www.jetbrains.com/help/webstorm/mastering-keyboard-shortcuts.html\#d1320088e89) 
 
+[https://www.jetbrains.com/help/webstorm/mastering-keyboard-shortcuts.html\#d1320088e89](https://www.jetbrains.com/help/webstorm/mastering-keyboard-shortcuts.html\#d1320088e89)
 
 
 ## Navigation rapide : Lancer une action / Ouvrir un fichier /  Localiser une classe...
@@ -45,7 +46,7 @@ Lorsque vous recherchez une action, le **raccourci clavier actif** apparaît à 
 [https://www.youtube.com/watch?v=upgjCMHGpwo](https://www.youtube.com/watch?v=upgjCMHGpwo)
 
 
-## Remerciement <a id="remerciement"></a>
+## Remerciement
 
 Merci à Yannick BIET pour sa contribution !
 
